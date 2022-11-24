@@ -7,19 +7,15 @@ class GpsState extends Equatable {
   const GpsState(
       {required this.isGpsEnabled, required this.isGpsPermissionGranted});
 
-
-  GpsState copyWith({bool? isGpsEnabled, bool? isGpsPermissionGranted}){
-    return GpsState(
-      isGpsEnabled: isGpsEnabled ?? this.isGpsEnabled,
-      isGpsPermissionGranted: isGpsPermissionGranted ?? this.isGpsPermissionGranted
-      );
-
+  GpsState copyWith({bool? isGpsEnabled, bool? isGpsPermissionGranted}) {
+    return GpsState( isGpsEnabled: isGpsEnabled ?? this.isGpsEnabled,isGpsPermissionGranted: isGpsPermissionGranted ?? this.isGpsPermissionGranted);
   }
 
   // propiedades que nos permiten identificar que un estado es igual o diferente a otro
   @override
-  List<Object> get props => [isGpsEnabled, isGpsPermissionGranted]; 
+  List<Object> get props => [isGpsEnabled, isGpsPermissionGranted];
 
   @override
-  String toString() => '{ isGpsEnabled: $isGpsEnabled, isGpsPermissionGranted: $isGpsPermissionGranted }';
+  String toString() =>
+      '{ isGpsEnabled: $isGpsEnabled, isGpsPermissionGranted: $isGpsPermissionGranted }';
 }
